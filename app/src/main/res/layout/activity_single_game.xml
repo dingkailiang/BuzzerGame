@@ -1,0 +1,79 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="ca.dingkaiualberta.buzzergame.UI.SingleGameActivity">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Restart"
+        android:id="@+id/restart"
+        android:visibility="gone"
+        android:onClick="onStartGame"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="204dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/score"
+        android:visibility="gone"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start!"
+        android:id="@+id/start"
+        android:visibility="gone"
+        android:onClick="onStartGame"
+        android:layout_below="@+id/welcome"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Tap Stop button when star appear"
+        android:id="@+id/welcome"
+        android:visibility="gone"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/starimage"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/abc_btn_rating_star_on_mtrl_alpha"
+        android:visibility="gone"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Tap too early!"
+        android:id="@+id/early"
+        android:visibility="gone"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="130dp"
+        android:text="Stop!"
+        android:id="@+id/stop"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:visibility="gone"
+        android:onClick="onStopGame"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>

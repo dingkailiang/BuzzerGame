@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">dingkai-reflex</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_single_game">SingleGameActivity</string>
+    <string name="title_activity_multi_game">MultiGameActivity</string>
+    <string name="title_activity_stats">StatsActivity</string>
+</resources>
