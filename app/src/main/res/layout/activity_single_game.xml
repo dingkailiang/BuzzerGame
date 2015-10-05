@@ -48,12 +48,12 @@
         android:layout_centerHorizontal="true" />
 
     <ImageView
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:id="@+id/starimage"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
-        android:src="@drawable/abc_btn_rating_star_on_mtrl_alpha"
+        android:src="@drawable/red"
         android:visibility="gone"/>
 
     <TextView

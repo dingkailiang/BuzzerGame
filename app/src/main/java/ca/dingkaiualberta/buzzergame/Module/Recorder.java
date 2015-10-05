@@ -1,6 +1,10 @@
 package ca.dingkaiualberta.buzzergame.Module;
 
 import android.content.Context;
+import android.content.Intent;
+import android.view.View;
+import android.widget.Toast;
+
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import java.io.BufferedReader;
@@ -140,6 +144,19 @@ public class Recorder {
             // do nothing
         } catch (IOException e) {
             throw new RuntimeException();
+        }
+    }
+
+    public void email(Context context){
+        Intent i = new Intent(Intent.ACTION_SEND);
+        i.setType("message/rfc822");
+        i.putExtra(Intent.EXTRA_EMAIL  , "");
+        i.putExtra(Intent.EXTRA_SUBJECT, "BuzzerStats");
+        i.putExtra(Intent.EXTRA_TEXT   , Recorder.getInstance().toString());
+        try {
+            context.startActivity(Intent.createChooser(i, "Send mail..."));
+        } catch (android.content.ActivityNotFoundException ex) {
+            Toast.makeText(context, "There are no email clients installed.", Toast.LENGTH_SHORT).show();
         }
     }
 
