@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import ca.dingkaiualberta.buzzergame.Module.Recorder;
 import ca.dingkaiualberta.buzzergame.R;
 
 public class MainActivity extends Activity {
@@ -13,6 +14,7 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Recorder.getInstance().load(this);
     }
 
     public void onSingleGame(View button) {

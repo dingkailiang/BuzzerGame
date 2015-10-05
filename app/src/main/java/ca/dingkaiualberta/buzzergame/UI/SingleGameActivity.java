@@ -30,10 +30,10 @@ public class SingleGameActivity extends Activity {
     }
 
     public void onStartGame(View button){
-        game.startGame();
+        game.startGame(button);
     }
 
     public void onStopGame(View button){
-        game.stopGame();
+        game.stopGame(button);
     }
 }

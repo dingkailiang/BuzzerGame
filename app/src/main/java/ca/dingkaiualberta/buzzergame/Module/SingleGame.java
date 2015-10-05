@@ -13,7 +13,7 @@ import ca.dingkaiualberta.buzzergame.R;
 /**
  * Created by dingkai on 10/4/15.
  */
-public class SingleGame {
+public class SingleGame implements Game{
     private TextView welcome;
     private TextView score;
     private TextView early;
@@ -40,12 +40,15 @@ public class SingleGame {
         timer = new Handler();
     }
 
-    public void startGame(){
-        welcome.setVisibility(View.GONE);
-        score.setVisibility(View.GONE);
-        early.setVisibility(View.GONE);
-        startButton.setVisibility(View.GONE);
-        restartButton.setVisibility(View.GONE);
+    public void startGame(View button){
+        if (button == startButton) {
+            welcome.setVisibility(View.GONE);
+            startButton.setVisibility(View.GONE);
+        }else {
+            score.setVisibility(View.GONE);
+            early.setVisibility(View.GONE);
+            restartButton.setVisibility(View.GONE);
+        }
         stopButton.setVisibility(View.VISIBLE);
         recTime = System.nanoTime();
         long delayTime = new Random().nextInt(1900) + 10;
@@ -59,7 +62,7 @@ public class SingleGame {
 
     }
 
-    public void stopGame(){
+    public void stopGame(View button){
         stopButton.setVisibility(View.GONE);
         starImage.setVisibility(View.GONE);
         restartButton.setVisibility(View.VISIBLE);
@@ -70,7 +73,8 @@ public class SingleGame {
         }else{
             score.setText(String.format("Reaction Time: %.2f seconds", recTime - delaySec));
             score.setVisibility(View.VISIBLE);
-            Recorder.add(recTime-delaySec);
+            Recorder.getInstance().add(recTime - delaySec);
+            Recorder.getInstance().save(button.getContext());
         }
     }
 }
