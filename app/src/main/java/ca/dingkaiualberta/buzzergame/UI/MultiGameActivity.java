@@ -1,17 +1,14 @@
 package ca.dingkaiualberta.buzzergame.UI;
 
-import android.support.v7.app.ActionBarActivity;
+import android.app.Activity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-
 import ca.dingkaiualberta.buzzergame.Module.MultiGame;
 import ca.dingkaiualberta.buzzergame.R;
 
-public class MultiGameActivity extends ActionBarActivity {
+public class MultiGameActivity extends Activity {
     private MultiGame game;
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -3,10 +3,8 @@ package ca.dingkaiualberta.buzzergame.Module;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-
 import java.util.ArrayList;
 
-import ca.dingkaiualberta.buzzergame.R;
 
 /**
  * Created by dingkai on 10/4/15.
@@ -34,7 +32,6 @@ public class MultiGame implements Game{
         playerList.add(bigPlayer2);
         this.restartButton = restartButton;
         this.winner = winner;
-
         for (Button mode:modeList) {
             mode.setVisibility(View.VISIBLE);
         }
@@ -49,19 +46,20 @@ public class MultiGame implements Game{
         }
         restartButton.setVisibility(View.GONE);
         winner.setVisibility(View.GONE);
-        switch (playerNum){
-            case 2:
-                playerList.get(4).setVisibility(View.VISIBLE);
-                playerList.get(5).setVisibility(View.VISIBLE);
-            case 3:
-                playerList.get(1).setVisibility(View.VISIBLE);
-                playerList.get(2).setVisibility(View.VISIBLE);
-                playerList.get(4).setVisibility(View.VISIBLE);
-            case 4:
-                playerList.get(0).setVisibility(View.VISIBLE);
-                playerList.get(1).setVisibility(View.VISIBLE);
-                playerList.get(2).setVisibility(View.VISIBLE);
-                playerList.get(3).setVisibility(View.VISIBLE);
+        if (playerNum == 2) {
+            playerList.get(4).setVisibility(View.VISIBLE);
+            playerList.get(5).setVisibility(View.VISIBLE);
+        }
+        if (playerNum == 3) {
+            playerList.get(1).setVisibility(View.VISIBLE);
+            playerList.get(2).setVisibility(View.VISIBLE);
+            playerList.get(4).setVisibility(View.VISIBLE);
+        }
+        if (playerNum == 4) {
+            playerList.get(0).setVisibility(View.VISIBLE);
+            playerList.get(1).setVisibility(View.VISIBLE);
+            playerList.get(2).setVisibility(View.VISIBLE);
+            playerList.get(3).setVisibility(View.VISIBLE);
         }
     }
 

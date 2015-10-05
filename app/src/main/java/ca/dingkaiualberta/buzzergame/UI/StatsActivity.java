@@ -6,14 +6,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
-
-
 import ca.dingkaiualberta.buzzergame.Module.Recorder;
-import ca.dingkaiualberta.buzzergame.Module.SingleGame;
 import ca.dingkaiualberta.buzzergame.R;
 
 public class StatsActivity extends Activity {
-    private SingleGame game;
     private TextView result;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
